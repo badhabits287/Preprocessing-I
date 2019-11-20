@@ -4,56 +4,214 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
+/* here i go */
+
+@fondo: rgb(95, 60, 60);
+
+.borders {
+  margin:5px;
+  padding:5px;
+  
+}
+
+.borders2 {
+  margin:10px;
+  padding:20px;
+  
+}
+
+
+
+
+
+body {
+  background-color: lighten(@fondo, 30%);
+  display: flex;
+  justify-content: center;
+  margin: 0;
+
+  header {
+    width: 100%;
+    position: fixed;
+    background-color: @fondo;
+    bottom: 0px;
+    z-index: 1;
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      
+
+
+      a {
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 20px;
+        padding: 20px;
+        color: black;
+      }
+      button {
+        margin: 10px;
+        box-shadow: darken(@fondo, 10%) 1px 5px 5px 1px;
+      }
+    }
+  }
+  .mainview {
+    margin: 0 100% 0 100%;
+    border: 10px solid darken(@fondo, 5%);
+    display: flex;
+    
+
+    .content {
+      display: flex;
+      margin: 0 100px 0 100px;
+      padding: 10px;
+      height: 100%;
+      width: 300px;
+      border: 1px solid white;
+
+      .caja {
+        .borders2;
+        opacity: 3;
+        background-color: darken(@fondo, 5%);
+      }
+    }
+  }
+}
