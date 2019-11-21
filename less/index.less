@@ -4,56 +4,229 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
+/* here i go */
+
+@fondo: rgb(31, 29, 109);
+@sombra: rgb(41, 118, 194);
+
+.borders {
+  margin: 5px;
+  padding: 5px;
+}
+
+.borders2 {
+  margin: 10px;
+  padding: 20px;
+}
+p {
+  color: white;
+}
+h1 {
+  text-shadow: 3px 2px 3px;
+  font-weight: bold;
+  font-size: 2em;
+  color: rgba(224, 24, 24, 0.582);
+  text-decoration: none;
+}
+body {
+  background-color: lighten(@fondo, 30%);
+  display: flex;
+  margin: 0;
+
+  .mainview {
+    box-shadow: 50px 0 50px 0;
+
+    padding-left: 220px;
+    border: 10px solid darken(@fondo, 5%);
+    border-bottom: 10px solid darken(@fondo, 5%);
+
+    background-color: darken(@fondo, 10%);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transform: rotate(-90deg);
+    padding-left: 100px;
+    transform-origin: center;
+
+    .content {
+      box-shadow: 50px 0 50px 0;
+      border: 1px solid white;
+      padding: 20px;
+      transform: rotate(90deg);
+      width: 500px;
+      height: 500px;
+      margin: 40px 40px 200px 40px;
+      
+    }
+  }
+
+  header {
+    display: flex;
+    position: fixed;
+
+    width: 520px;
+
+    background-color: @fondo;
+    bottom: 0;
+
+    z-index: 1;
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 0.5em;
+        padding: 0.5em;
+        color: black;
+        font-size: 0.8em;
+      }
+      button {
+        margin: 10px;
+        box-shadow: 1px 5px 5px 1px;
+      }
+    }
+  }
+}
